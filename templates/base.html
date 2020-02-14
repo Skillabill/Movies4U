@@ -6,6 +6,21 @@
 <body>
     <h1>Outside</h1>
     {% block content %}
+        <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+        <h1 class="display-3">Flix</h1>
+        <p class="lead ">Movie Reviews</p>
+        <div class="row">
+            <div class="col-lg-4">
+                <form class="input-group mb-3" action="{{ url_for('search') }}">
+                    <input class="form-control" type="text" name="query"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Find Movies</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
     {% endblock %}
 </body>
 </html>
