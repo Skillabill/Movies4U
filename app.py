@@ -23,6 +23,6 @@ def handle_404(exception):
     return render_template('404.html', exception=exception)
 
 if __name__ == '__main__':
-    app.config['TRAP_BAD_REQUEST_ERRORS'] = False
-    app.config['DEBUG'] = False
-    app.run(host='127.0.0.1', degug=False)
+    app.run(host = os.environ.get('IP')
+            port=int(os.environ.get('PORT')),
+            debug=True)
