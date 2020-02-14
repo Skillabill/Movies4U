@@ -1,11 +1,7 @@
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
         {% for task in tasks %}
             {{task.title}}
             {{task.rating}}
         {% endfor %}
-    </body>
-</html>
+{% endblock %}
