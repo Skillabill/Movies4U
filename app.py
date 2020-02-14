@@ -14,15 +14,12 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_movie-reviews')
-def get_moviereviews():
-    return render_template('index.html', moviereviews = mongo.db.movie-reviews.find())
+@app.route('/get_tasks')
+def get_tasks():
+    return render_template("tasks.html", tasks=mongo.db.tasks.find())
 
-@app.errorhandler(404)
-def handle_404(exception):
-    return render_template('404.html', exception=exception)
 
 if __name__ == '__main__':
-    app.run(host = os.environ.get('IP')
+    app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
             debug=True)

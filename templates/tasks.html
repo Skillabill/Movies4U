@@ -5,9 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-    {% for task in movie-reviews %}
-        {{% task.movie-reviews_title %}}
-        {{% task.movie-reviews_rating %}}
+    {% for task in tasks %}
+        {{% task.task_title %}}
+        {{% task.task_rating %}}
     {% endfor %}
 </body>
 </html>
