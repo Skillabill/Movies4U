@@ -1,13 +1,13 @@
-#Flix
-####Milestone Project 3: Practical Python and Data Centric Development
+# Flix
+#### Milestone Project 3: Practical Python and Data Centric Development
 The purpose of this project was to design and implement an application with the following two functions. 
 * Firstly to allow users to review movies and upload those reviews onto a publicly available application on the internet.
 * And secondly to allow users to use this application to search movie reviews.
 
  
-###UX Design
+### UX Design
 
-####Software Development Lifecycle (SDLC)
+#### Software Development Lifecycle (SDLC)
 The approach to the SDLC included the following phases:
 * User requirement gathering.
 * Functional Specification.
@@ -38,7 +38,7 @@ This functional specification included key features such as
 **Design Specification** - Based on the key functionalities a design specification
 was developed. This specification resulted in the following technologies that where used 
 in meeting the requirements for this project.  
-#####Technologies Used
+##### Technologies Used
 * Python
 * HTML5
 * CSS/Materialize
