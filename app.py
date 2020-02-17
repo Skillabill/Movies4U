@@ -13,13 +13,18 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
+    """Home page"""
     return render_template("index.html", title="Home")
 
-@app.route('/create', methods =['POST'])
+@app.route('/create')
 def create():
     """Creates a review and enters into movie-review collection"""
     return render_template("create.html", title="Create")
 
+@app.route('/collection')
+def collection():
+    """Brings you to the Movie Review Collection"""
+    return render_template("collection.html", title="Collection")
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
