@@ -11,9 +11,14 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_moviereviews')
-def get_moviereviews():
-    return render_template("tasks.html", moviereviews=mongo.db.moviereviews.find())
+@app.route('/index')
+def index():
+    return render_template("index.html", title="Home")
+
+@app.route('/create', methods =['GET', 'POST'])
+def create():
+    """Creates a review and enters into movie-review collection"""
+    return render_template("create.html", title="Create")
 
 
 if __name__ == '__main__':
