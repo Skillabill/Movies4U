@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html", title="Home")
 
-@app.route('/create', methods =['GET', 'POST'])
+@app.route('/create', methods =['POST'])
 def create():
     """Creates a review and enters into movie-review collection"""
     return render_template("create.html", title="Create")

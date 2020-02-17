@@ -8,19 +8,22 @@
      <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
+
 <header>
   <nav>
     <div class="nav-wrapper">
       <a href="{{ url_for ('index') }}" class="brand-logo right">Logo</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="{{ url_for 'index' }}">Home</a></li>
-        <li><a href="{{ url_for 'reviews' }}">Reviews</a></li>
-        <li><a href="{{ url_for 'create' }}">Create</a></li>
+        <li><a href="{{ url_for ('index') }}">Home</a></li>
+        <li><a href="{{ url_for ('reviews') }}">Reviews</a></li>
+        <li><a href="{{ url_for ('create') }}">Create</a></li>
       </ul>
     </div>
   </nav>
 </header>
+{% block content %}
 
+{% endblock %}
 
 
 
@@ -36,5 +39,6 @@
         <p class="m-0 text-center text-white">Copyright &copy; FLIX 2020</p>
     </div>
 </footer>
+
 </body>
 </html>
