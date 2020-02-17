@@ -64,7 +64,7 @@ Github was used as the source code repository which also provided version contro
  
 **Deployment** - 
 #### Structure Plane:
-![Index page layout](../images/flix-index.png)
+![Index page layout](Movies4U/images/flix-index.png)
 #### Skeleton Plane:
 
 #### Features:
