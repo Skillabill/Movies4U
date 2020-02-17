@@ -64,7 +64,7 @@ Github was used as the source code repository which also provided version contro
  
 **Deployment** - 
 #### Structure Plane:
-
+![Index page layout](../images/flix-index.png)
 #### Skeleton Plane:
 
 #### Features:
@@ -76,4 +76,4 @@ Github was used as the source code repository which also provided version contro
 
 ##### Acknowledements
 * My **Mentor** for his guidance all through this project.
-* **Tutors** at [Code Institute]() for all their help.
+* **Tutors** at [Code Institute](https://codeinstitute.net/) for all their help.
