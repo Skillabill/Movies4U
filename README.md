@@ -72,7 +72,7 @@ Github was used as the source code repository which also provided version contro
 #### Future Implements:
 * Login/Register 
 
-####Credits
+#### Credits
 
 ##### Acknowledements
 * My **Mentor** for his guidance all through this project.
