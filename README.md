@@ -40,12 +40,20 @@ was developed. This specification resulted in the following technologies that wh
 in meeting the requirements for this project.  
 ##### Technologies Used
 * Python
+  * Python is used for the back-end of this project.  
 * HTML5
+  * Is used for the structure on the front-end.
 * CSS/Materialize
+  * Used for the styling of the application.
+  * Materialize is used as responsive front-end framework based on Material Design.
 * MongoDB
+  * Data storage and control input fields.
 * Heroku
+  * Used for the deployment of this application.
 * Flask
+  * A lightweight web frame of Python. It provides libraries, modules and tools to help build my web application. This is a micro framework.
 * GIT
+  * Used for version control and pushing this project to Github repository.
 
 **Development** - The Integrated Development Environment (IDE) PyCharm was used as the development platform for this project.
 Github was used as the source code repository which also provided version control and release management.    
@@ -55,26 +63,17 @@ Github was used as the source code repository which also provided version contro
 **User acceptance** - 
  
 **Deployment** - 
-####Structure Plane:
+#### Structure Plane:
 
-####Skeleton Plane:
+#### Skeleton Plane:
 
-####Features:
+#### Features:
 
-####Future Implements:
+#### Future Implements:
 * Login/Register 
 
-
-###Testing
-
-###Deployment
-
-
 ####Credits
-#####Content
 
-#####Media
-
-#####Acknowledements
+##### Acknowledements
 * My **Mentor** for his guidance all through this project.
 * **Tutors** at [Code Institute]() for all their help.
