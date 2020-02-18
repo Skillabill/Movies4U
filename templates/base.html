@@ -12,11 +12,11 @@
 <header>
   <nav>
     <div class="nav-wrapper">
-      <a href="{{ url_for ('index') }}" class="brand-logo right">Flix</a>
+      <a href="{{ url_for ('get_tasks') }}" class="brand-logo right">Flix</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="{{ url_for ('index') }}">Home</a></li>
-        <li><a href="{{ url_for ('collection') }}">Collection</a></li>
-        <li><a href="{{ url_for ('create') }}">Create</a></li>
+        <li><a href="{{ url_for ('get_tasks') }}">Home</a></li>
+        <li><a href="{{ url_for ('get_categories') }}">Collection</a></li>
+        <li><a href="{{ url_for ('add_task') }}">Create</a></li>
       </ul>
     </div>
   </nav>
