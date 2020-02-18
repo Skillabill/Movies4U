@@ -1,5 +1,5 @@
 from flask import Flask, render_template, flash, redirect, url_for, request, session
-from forms import CreateReviewForm, EditReviewForm, ConfirmDelete
+
 from flask_pymongo import PyMongo, DESCENDING
 from bson.objectid import ObjectId
 import re
@@ -8,7 +8,7 @@ import os
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
-app.config["MONGO_URI"] = 'mongodb+srv://Mark:CTK1rwan@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://Mark:<password>@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
