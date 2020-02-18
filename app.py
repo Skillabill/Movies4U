@@ -2,7 +2,6 @@ from flask import Flask, render_template, flash, redirect, url_for, request, ses
 from forms import CreateReviewForm, EditReviewForm, ConfirmDelete
 from flask_pymongo import PyMongo, DESCENDING
 from bson.objectid import ObjectId
-import bcrypt
 import re
 import math
 import os

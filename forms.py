@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Length, EqualTo, Email
 
-class CreateRecipeForm(FlaskForm):
+class CreateReviewForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     short_description = TextAreaField('Short Description', validators=[DataRequired()])
     staring = TextAreaField('Staring (one per line please)', validators=[DataRequired()])
@@ -12,7 +12,7 @@ class CreateRecipeForm(FlaskForm):
     submit = SubmitField('Add Review')
 
 
-class EditRecipeForm(FlaskForm):
+class EditReviewForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     short_description = TextAreaField('Short Description', validators=[DataRequired()])
     staring = TextAreaField('Staring (one per line please)', validators=[DataRequired()])
