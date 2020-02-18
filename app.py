@@ -1,7 +1,8 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, DESCENDING
 from bson.objectid import ObjectId
+
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
@@ -25,6 +26,14 @@ def create():
 def collection():
     """Brings you to the Movie Review Collection"""
     return render_template("collection.html", title="Collection")
+
+# Search for a recipe
+
+@app.route('/search', methods=['POST'])
+def search():
+  query = request.form.get('query')
+  search_collection = mongo.db.collection.find({'$text': {'$search': query}})
+  return render_template('collection.html', search_collection=search_collection, query=query)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
