@@ -1,6 +1,6 @@
 /* Jumbotron */
 
 .jumbotron {
-  background-image: url(../images/movie-index.png);
+  background-image: url(../static/images/movie-index.png);
   background-size: cover;
 }

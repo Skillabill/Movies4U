@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    <header class="jumbotron">
-      <h2 class="index_title title_position_ipad">Flix</h2>
-      <div class="row">
-        <div class="search_recipe input-field col s6 l3">
-            <form action="{{ url_for('collection') }}" method="POST">
-              <input class="index_searchbox text_search_padding" name="query" type="text">
-        </div>
-        <div class="find_recipes_button col s6 l3">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Find Reviews
-            <i class="material-icons right">send</i>
-          </button>
-          </form>
-        </div>
-      </div>
-    </header>
+    <div class="container">
+        <header class="jumbotron my-4">
+            <h1 class="display-3">Flix</h1>
+            <p class="lead ">Movie Reviews</p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <form class="input-group mb-3" action="{{ url_for('search') }}">
+                        <input class="form-control" type="text" name="query"/>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">Find Reviews</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+    </div>
 
 {% endblock %}
