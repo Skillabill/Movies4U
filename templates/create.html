@@ -4,7 +4,7 @@
  <div class="container">
    <h1>Create</h1>
     <div class="row">
-      <form class="col s12">
+      <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
         <div class="row">
           <div class="input-field col s6">
             <input id="title" name="title" type="text" class="validate">
