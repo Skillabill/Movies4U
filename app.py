@@ -6,15 +6,17 @@ import os
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
-app.config["MONGO_URI"] = 'mongodb+srv://Mark:<>@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://Mark:CTK1rwan@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
 @app.route('/')
 @app.route('/get_tasks')
 def get_tasks():
-    return render_template("index.html",
-         tasks=mongo.db.tasks.find())
+    all_tasks=mongo.db.tasks.find()
+    print(all_tasks)
+    return render_template('index.html', tasks=all_tasks)
+
 
 
 @app.route('/add_task')
@@ -78,6 +80,17 @@ def search():
         ]
     })
     return render_template('search.html', query=orig_query, results=results)
+
+@app.route('/review/<review_id>')
+def review(review_id):
+    print(review_id)
+    """Shows full recipe and increments view"""
+    mongo.db.tasks.find_one_and_update(
+        {'_id': ObjectId(review_id)},
+        {'$inc': {'views': 1}}
+    )
+    tasks_db = mongo.db.tasks.find_one_or_404({'_id': ObjectId(review_id)})
+    return render_template('review.html', review=tasks_db)
 
 @app.errorhandler(404)
 def handle_404(exception):

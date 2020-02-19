@@ -1,23 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="mt-2">{{ task.title }}</h1>
+        <h1 class="mt-2">{{ review.title }}</h1>
 
     <div class="row pt-3">
         <div class="col-lg-6">
-            <p>Views: {{ task.views }}</p>
-            <img class="card-img-top border-right" src="{{ task.image }}" alt="">
+            <p>Views: {{ review.views }}</p>
+            <img class="card-img-top border-right" src="{{ review.image }}" alt="">
             <hr>
-            <h5>{{ task.description }}</h5>
+            <h5>{{ review.description }}</h5>
             <br>
         </div>
         <div class="col-lg-6">
-            <h3>Ingredients</h3>
-            <p style="white-space: pre-wrap;">{{ task.review }}</p>
+            <h3>Staring</h3>
+            <p style="white-space: pre-wrap;">{{ review.actors }}</p>
+            <h3>Director</h3>
+            <p style="white-space: pre-wrap;">{{ review.director }}</p>
+            <h5>Running Time</h5>
+            <p style="white-space: pre-wrap;">{{ review.running_time }}</p>
         </div>
     </div>
         <div class="row float-right">
-            <a href="{{ url_for('edit_task', task_id=recipe._id) }}" class="btn btn-secondary mr-3">Edit Recipe</a>
-            <a href="{{ url_for('delete_task', task_id=recipe._id) }}" class="btn btn-danger">Delete Recipe</a>
+            <a href="{{ url_for('edit_task', task_id=review._id) }}" class="btn btn-secondary mr-3">Edit</a>
+            <a href="{{ url_for('delete_task', task_id=review._id) }}" class="btn btn-danger">Delete</a>
         </div>
 {% endblock %}

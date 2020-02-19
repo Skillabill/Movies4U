@@ -6,8 +6,7 @@
                   <div class="card-body">
                     <h5 class="card-title">{{task.title}}</h5>
                     <p class="card-text">{{task.description}}</p>
-                      <a href="{{url_for('delete_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
-                      <a href="{{url_for('edit_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                      <a href="{{url_for('review', review_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Info</a>
                   </div>
                 </div>
     {% endfor %}

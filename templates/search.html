@@ -2,6 +2,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+{{search}}
     <h1>Results for: <em>{{ query }}</em>.</h1>
     <div class="row text-center">
     {% for task in results %}
