@@ -1,11 +1,12 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import re
 import os
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
-app.config["MONGO_URI"] = 'mongodb+srv://Mark:CTK1rwan@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://Mark:<>@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
@@ -26,7 +27,7 @@ def add_task():
 def insert_task():
     tasks =  mongo.db.tasks
     tasks.insert_one(request.form.to_dict())
-    return redirect(url_for('get_tasks'))
+    return redirect(url_for('get_categories'))
 
 
 @app.route('/edit_task/<task_id>')
@@ -59,41 +60,28 @@ def delete_task(task_id):
 
 @app.route('/get_categories')
 def get_categories():
-    return render_template('categories.html',
+    return render_template('collection.html',
                            categories=mongo.db.categories.find())
 
+@app.route('/search')
+def search():
+    """Provides logic for search bar"""
+    orig_query = request.args['query']
+    # using regular expression setting option for any case
+    query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
+    # find instances of the entered word in title, tags or reviews
+    results = mongo.db.tasks.find({
+        '$or': [
+            {'title': query},
+            {'director': query},
+            {'actors': query},
+        ]
+    })
+    return render_template('search.html', query=orig_query, results=results)
 
-@app.route('/delete_category/<category_id>')
-def delete_category(category_id):
-    mongo.db.categories.remove({'_id': ObjectId(category_id)})
-    return redirect(url_for('get_categories'))
-
-
-@app.route('/edit_category/<category_id>')
-def edit_category(category_id):
-    return render_template('editcategory.html',
-    category=mongo.db.categories.find_one({'_id': ObjectId(category_id)}))
-
-
-@app.route('/update_category/<category_id>', methods=['POST'])
-def update_category(category_id):
-    mongo.db.categories.update(
-        {'_id': ObjectId(category_id)},
-        {'category_name': request.form.get('category_name')})
-    return redirect(url_for('get_categories'))
-
-
-@app.route('/insert_category', methods=['POST'])
-def insert_category():
-    category_doc = {'category_name': request.form.get('category_name')}
-    mongo.db.categories.insert_one(category_doc)
-    return redirect(url_for('get_categories'))
-
-
-@app.route('/add_category')
-def add_category():
-    return render_template('create.html')
-
+@app.errorhandler(404)
+def handle_404(exception):
+    return render_template('404.html', exception=exception)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

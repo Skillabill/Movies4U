@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row mt-2">
+        <div class="col-lg-8">
+            <h1>Collection</h1>
+        </div>
+        <div class="col-lg-4">
+            <form action="{{ url_for('search') }}">
+                <input type="text" name="query"/>
+                <input type="submit" class="btn btn-primary" value="Search Recipes!"/>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row text-center">
+        {% for task in tasks %}
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ task.image }}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ task.title }}</h4>
+                        <p class="card-text">{{ task.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ url_for('review', review_id=review._id) }}" class="btn btn-primary">Find Out
+                            More!</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div>
+        <nav aria-label="Search Results Pages">
+            <ul class="pagination pagination-lg justify-content-center">
+                {% for pagenum in pages %}
+                    {% if pagenum == page %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ pagenum }}
+                                <span class="sr-only">(current)</span>
+                            </span>
+                        </li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link"
+                                                 href="{{ url_for('collection', page=pagenum) }}">{{ pagenum }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+
+    </div>
+{% endblock %}

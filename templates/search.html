@@ -10,7 +10,7 @@
             <img class="card-img-top" src="{{ task.image }}" alt="">
             <div class="card-body">
               <h4 class="card-title">{{ task.title }}</h4>
-              <p class="card-text">{{ task.short_description }}</p>
+              <p class="card-text">{{ task.description }}</p>
             </div>
             <div class="card-footer">
               <a href="{{ url_for('add_task', task_id=review._id) }}" class="btn btn-primary">Find Out More!</a>
