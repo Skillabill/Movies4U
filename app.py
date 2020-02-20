@@ -8,7 +8,7 @@ import math
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
-app.config["MONGO_URI"] = 'mongodb+srv://Mark:<>@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://Mark:CTK1rwan@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
