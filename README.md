@@ -54,7 +54,7 @@ in meeting the requirements for this project.
 * Flask
   * A lightweight web frame of Python. It provides libraries, modules and tools to help build my web application. This is a micro framework.
 * GIT
-  * Used for version control and pushing this project to Github repository.
+  * Used for version control and pushing this project to Heroku and Github repository.
 
 **Development** - The Integrated Development Environment (IDE) PyCharm was used as the development platform for this project.
 Github was used as the source code repository which also provided version control and release management.    
