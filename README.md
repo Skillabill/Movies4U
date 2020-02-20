@@ -4,6 +4,7 @@ The purpose of this project was to design and implement an application with the 
 * Firstly to allow users to review movies and upload those reviews onto a publicly available application on the internet.
 * And secondly to allow users to use this application to search movie reviews.
 
+The Project can be viewed [here](https://flicksreviews.herokuapp.com/ ).
  
 ### UX Design
 

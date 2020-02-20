@@ -3,6 +3,8 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import re
 import os
+import math
+
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
@@ -22,22 +24,22 @@ def get_tasks():
 @app.route('/add_task')
 def add_task():
     return render_template('create.html',
-     categories=mongo.db.categories.find())
+     task=mongo.db.tasks.find())
 
 
 @app.route('/insert_task', methods=['POST'])
 def insert_task():
     tasks =  mongo.db.tasks
     tasks.insert_one(request.form.to_dict())
-    return redirect(url_for('get_categories'))
+    return redirect(url_for('get_tasks'))
 
 
 @app.route('/edit_task/<task_id>')
 def edit_task(task_id):
     the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    all_categories =  mongo.db.categories.find()
-    return render_template('edit.html', task=the_task,
-                           categories=all_categories)
+    all_task =  mongo.db.tasks.find()
+    return render_template('edit.html', tasks=the_task,
+                           review=all_task)
 
 
 @app.route('/update_task/<task_id>', methods=["POST"])
@@ -59,11 +61,6 @@ def delete_task(task_id):
     mongo.db.tasks.remove({'_id': ObjectId(task_id)})
     return redirect(url_for('get_tasks'))
 
-
-@app.route('/get_categories')
-def get_categories():
-    return render_template('collection.html',
-                           categories=mongo.db.categories.find())
 
 @app.route('/search')
 def search():
