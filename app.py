@@ -3,7 +3,6 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import re
 import os
-import math
 
 
 app = Flask(__name__)
@@ -18,7 +17,6 @@ def get_tasks():
     all_tasks=mongo.db.tasks.find()
     print(all_tasks)
     return render_template('index.html', tasks=all_tasks)
-
 
 
 @app.route('/add_task')
@@ -37,23 +35,7 @@ def insert_task():
 @app.route('/edit_task/<task_id>')
 def edit_task(task_id):
     the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    all_task =  mongo.db.tasks.find()
-    return render_template('edit.html', tasks=the_task,
-                           review=all_task)
-
-
-@app.route('/update_task/<task_id>', methods=["POST"])
-def update_task(task_id):
-    tasks = mongo.db.tasks
-    tasks.update( {'_id': ObjectId(task_id)},
-    {
-        'title':request.form.get('title'),
-        'category_name':request.form.get('category_name'),
-        'director': request.form.get('director'),
-        'year': request.form.get('year'),
-        'actors':request.form.get('actors')
-    })
-    return redirect(url_for('index'))
+    return render_template('edit.html', tasks=the_task)
 
 
 @app.route('/delete_task/<task_id>')
