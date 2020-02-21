@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
-app.config["MONGO_URI"] = 'mongodb+srv://Mark:CTK1rwan@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://Mark:<>@myfirstcluster-x7w2o.mongodb.net/Movies4U?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
@@ -34,9 +34,22 @@ def insert_task():
 
 @app.route('/edit_task/<task_id>')
 def edit_task(task_id):
-    the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    return render_template('edit.html', tasks=the_task)
+    the_task =  mongo.db.tasks.find({'_id': ObjectId(task_id)})
+    return render_template('edit.html', task=the_task)
 
+@app.route('/update_task/<task_id>', methods=['POST'])
+def update_task(task_id):
+    tasks = mongo.db.tasks
+    tasks.update( {'_id': ObjectId(task_id)},
+    {
+        'title':request.form.get('title'),
+        'actors':request.form.get('actors'),
+        'director': request.form.get('director'),
+        'description': request.form.get('description'),
+        'review':request.form.get('review'),
+        'running_time' : request.form.get('running_time')
+    })
+    return redirect(url_for('get_tasks'))
 
 @app.route('/delete_task/<task_id>')
 def delete_task(task_id):
