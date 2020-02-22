@@ -5,7 +5,12 @@ h1 {
 }
 
 .jumbotron {
-  background-image:url("../css/images/movie-index.jpg");
+  background-image: url(../images/movie-index.jpeg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: 0.5rem;
+  max-width: 100%;
+  height: auto;
 }
 

@@ -1,20 +1,19 @@
-
 {% extends "base.html" %}
 
 {% block content %}
 {{search}}
-    <h1>Results for: <em>{{ query }}</em>.</h1>
-    <div class="row text-center">
+<h1>Results for: <em>{{ query }}</em>.</h1>
+<div class="row text-center">
     {% for task in results %}
-         <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{task.image}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{task.title}}</h5>
-                    <a href="{{url_for('review', review_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Info</a>
-                </div>
+    <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{task.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{task.title}}</h5>
+                <a href="{{url_for('review', review_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Info</a>
             </div>
         </div>
-    {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {%  endblock %}

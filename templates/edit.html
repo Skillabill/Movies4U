@@ -1,70 +1,70 @@
-
 {% extends 'base.html' %} {% block content %}
 <div class="container">
-<h3>Edit Review</h3>
-<div class="row">
+    <h3>Edit Review</h3>
+    <div class="row">
 
-    <form action="{{ url_for('update_task', task_id=task._id) }}" method="POST"  class="col s12">
-        <div class="row col">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">movie</i>
-                <input id="title" name="title" type="text" value="{{task.title}}">
-                <label for="icon_prefix">Movie Title</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">videocam</i>
-                <input id="director" name="director" type="text" value="{{task.director}}">
-                <label for="icon_prefix">Director</label>
-            </div>
-        </div>
-
-        <div class="row col">
-           <div class="input-field col s6">
-                <i class="material-icons prefix">recent_actors</i>
-                <input id="actors" name="actors" type="text" value="{{task.actors}}">
-                <label for="icon_prefix">Actors</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">timer</i>
-                <input id="running_time" name="running_time" type="text" value="{{task.running_time}}">
-                <label for="icon_prefix">Running Time (minutes)</label>
-            </div>
-        </div>
-
-        <div class="row col">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">add_a_photo</i>
-                <input id="image" name="image" type="text" value="{{task.image}}">
-                <label for="icon_prefix">Movie Image</label>
-            </div>
-        </div>
-
-        <div class="row col">
-              <div class="row col s12">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">description</i>
-                <textarea id="description" name="description" class="materialize-textarea">{{task.description}}</textarea>
-                <label for="icon_prefix">Storyline</label>
+        <form action="{{ url_for('update_task', task_id=task._id) }}" method="POST" class="col s12">
+            <div class="row col">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">movie</i>
+                    <input id="title" name="title" type="text" value="{{task.title}}">
+                    <label for="icon_prefix">Movie Title</label>
                 </div>
-              </div>
-        </div>
-
-        <div class="row col">
-              <div class="row col s12">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">rate_review</i>
-                <textarea id="review" name="review" class="materialize-textarea">{{task.review}}</textarea>
-                <label for="icon_prefix">Review</label>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">videocam</i>
+                    <input id="director" name="director" type="text" value="{{task.director}}">
+                    <label for="icon_prefix">Director</label>
                 </div>
-              </div>
-        </div>
+            </div>
 
-        <div class="row col">
-            <button class="btn waves-effect waves-light" type="submit">Edit
-                <i class="material-icons right">playlist_add</i>
-            </button>
-        </div>
-    </form>
-</div>
+            <div class="row col">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">recent_actors</i>
+                    <input id="actors" name="actors" type="text" value="{{task.actors}}">
+                    <label for="icon_prefix">Actors</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">timer</i>
+                    <input id="running_time" name="running_time" type="text" value="{{task.running_time}}">
+                    <label for="icon_prefix">Running Time (minutes)</label>
+                </div>
+            </div>
+
+            <div class="row col">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">add_a_photo</i>
+                    <input id="image" name="image" type="text" value="{{task.image}}">
+                    <label for="icon_prefix">Movie Image</label>
+                </div>
+            </div>
+
+            <div class="row col">
+                <div class="row col s12">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">description</i>
+                        <textarea id="description" name="description"
+                                  class="materialize-textarea">{{task.description}}</textarea>
+                        <label for="icon_prefix">Storyline</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col">
+                <div class="row col s12">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">rate_review</i>
+                        <textarea id="review" name="review" class="materialize-textarea">{{task.review}}</textarea>
+                        <label for="icon_prefix">Review</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col">
+                <button class="btn waves-effect waves-light" type="submit">Edit
+                    <i class="material-icons right">playlist_add</i>
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}
