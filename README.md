@@ -5,6 +5,8 @@ The purpose of this project was to design and implement an application with the 
 * And secondly to allow users to use this application to search movie reviews.
 
 The Project can be viewed [here](https://flicksreviews.herokuapp.com/ ).
+
+For optimal performance it is recommended to use Google Chrome browser.
  
 ### UX Design
 
@@ -47,6 +49,8 @@ in meeting the requirements for this project.
 * CSS/Materialize
   * Used for the styling of the application.
   * Materialize is used as responsive front-end framework based on Material Design.
+* Javascript/jQuery
+  *
 * MongoDB
   * Data storage and control input fields.
 * Heroku
@@ -56,25 +60,39 @@ in meeting the requirements for this project.
 * GIT
   * Used for version control and pushing this project to Heroku and Github repository.
 
-**Development** - The Integrated Development Environment (IDE) PyCharm was used as the development platform for this project.
+**Development** - The Integrated Development Environment (IDE) PyCharm was used as the development platform for this project which
+is a segragated environment from the live environment.
 Github was used as the source code repository which also provided version control and release management.    
  
-**Testing** -
- 
-**User acceptance** - 
- 
-**Deployment** - 
+**Testing** - The test strategy that was used throughout this project that ensured a quality of delivery for the application
+included the following.
+* Unit Testing
+  * The application was broken down into individual units before the development phase. Each of these units represented
+  the key functionalities of the application which where tested seperately.   
+* Integration Testing
+  * As the application consists of a Frontend web-application supported by a Backend database. Integration testing was 
+  necessary to ensure integrety of the links. 
+* User Acceptance Testing
+  * User Acceptance Testing was performed to ensure that the key functionality and user requirements gathered at the start 
+  of the project where successfully delivered.  
+* Regression Testing
+  * In order to ensure the application was fully functional in the live environment regression testing was performed on key functionalities.
+   
+**Deployment** - As this application was an initial deployment it was put into a live environment following the completion 
+of successful testing mentioned previously. The application will be maintained in the live environment and upgraded as necessary.
+Deployment of future updates will be controlled within a maintenance window which will be notified to users to minimise disruption.  
 #### Structure Plane:
 ![Index page layout](Movies4U/images/flix-index.png)
 #### Skeleton Plane:
-
-#### Features:
 
 #### Future Implements:
 * Login/Register 
 
 #### Credits
 
+
 ##### Acknowledements
+* User **Clare Kirwan**. 
+* Movie Reviewer **Justin Byrne**.
 * My **Mentor** for his guidance all through this project.
 * **Tutors** at [Code Institute](https://codeinstitute.net/) for all their help.
