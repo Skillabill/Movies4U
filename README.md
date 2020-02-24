@@ -78,7 +78,7 @@ Deployment of future updates will be controlled within a maintenance window whic
 
 #### Credits
 * All review information used on version 1.0 has been taken from [IMDb.com](hhtp//:www.imdb.com).
-* Images taken from [Google Images](http//:www.google.com/images).
+* Images taken from [Google](http//:www.google.com) images.
 
 ##### Acknowledements
 * User **Clare Kirwan**. 
