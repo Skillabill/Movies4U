@@ -1,8 +1,12 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import re
 import os
+from config import Config
+from forms import CreateRecipeForm, EditRecipeForm, ConfirmDelete
+
+
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Movies4U'
@@ -62,11 +66,8 @@ def delete_task(task_id):
 
 @app.route('/search')
 def search():
-    """Provides logic for search bar"""
     orig_query = request.args['query']
-    # using regular expression setting option for any case
     query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
-    # find instances of the entered word in title, tags or reviews
     results = mongo.db.tasks.find({
         '$or': [
             {'title': query},
