@@ -2,7 +2,7 @@
 #### Milestone Project 3: Practical Python and Data Centric Development
 The purpose of this project was to design and implement an application with the following two functions. 
 * Firstly to allow users to review movies and upload those reviews onto a publicly available application on the internet.
-* And secondly to allow users to use this application to search movie reviews.
+* And secondly, to allow users to use this application to search movie reviews.
 
 The Project can be viewed [here](https://flicksreviews.herokuapp.com/ ).
 
@@ -22,16 +22,14 @@ The approach to the SDLC included the following phases:
 
 **User requirements gathering** - First part of the requirements gathering phase of this project included interviewing a movie critic
 to find out what they would like to see as key features on a movie review application. Second part of the requirements gathering 
-phase included researching what a typical user would like to see as key functionalities in searching movie reviews on a 
+phase included researching what a typical user would like to see as key functionalities in searching movie reviews on an 
 application.
 
 **Functional Specification** - Having gathered the user requirements a functional specification was developed.
 This functional specification included key features such as 
 * Input template
 * Data entry form
-* Re-use of previously entered data(Director - other movies)
 * One Click feature for movie ratings (1-5 stars)
-* Confirmation alert for movie review entry
 * Search functionality for finding movie
 * Actor / Director info
 * One URL which allows you to submit or search a review
@@ -42,23 +40,14 @@ This functional specification included key features such as
 was developed. This specification resulted in the following technologies that where used 
 in meeting the requirements for this project.  
 ##### Technologies Used
-* Python
-  * Python is used for the back-end of this project.  
+* Python 
 * HTML5
-  * Is used for the structure on the front-end.
-* CSS/Materialize
-  * Used for the styling of the application.
-  * Materialize is used as responsive front-end framework based on Material Design.
-* Javascript/jQuery
-  *
+* CSS / Materialize
+* Javascript / JQuery
 * MongoDB
-  * Data storage and control input fields.
 * Heroku
-  * Used for the deployment of this application.
 * Flask
-  * A lightweight web frame of Python. It provides libraries, modules and tools to help build my web application. This is a micro framework.
 * GIT
-  * Used for version control and pushing this project to Heroku and Github repository.
 
 **Development** - The Integrated Development Environment (IDE) PyCharm was used as the development platform for this project which
 is a segragated environment from the live environment.
@@ -81,15 +70,15 @@ included the following.
 **Deployment** - As this application was an initial deployment it was put into a live environment following the completion 
 of successful testing mentioned previously. The application will be maintained in the live environment and upgraded as necessary.
 Deployment of future updates will be controlled within a maintenance window which will be notified to users to minimise disruption.  
-#### Structure Plane:
-![Index page layout](Movies4U/images/flix-index.png)
-#### Skeleton Plane:
 
 #### Future Implements:
-* Login/Register 
+* Login/Registration 
+* Confirmation alert for movie review entry
+* Re-use of previously entered data (Director / Actor - other movies)
 
 #### Credits
-
+* All review information used on version 1.0 has been taken from [IMDb.com](hhtp//:www.imdb.com).
+* Images taken from [Google Images](http//:www.google.com/images).
 
 ##### Acknowledements
 * User **Clare Kirwan**. 
