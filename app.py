@@ -1,10 +1,7 @@
-from flask import Flask, render_template, redirect, url_for, request, session
+from flask import Flask, render_template, redirect, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-import re
 import os
-from config import Config
-from forms import CreateRecipeForm, EditRecipeForm, ConfirmDelete
 
 
 
@@ -67,21 +64,13 @@ def delete_task(task_id):
 @app.route('/search')
 def search():
     orig_query = request.args['query']
-    query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
-    results = mongo.db.tasks.find({
-        '$or': [
-            {'title': query},
-            {'director': query},
-            {'actors': query},
-        ]
-    })
-    return render_template('search.html', query=orig_query, results=results)
+    return render_template('search.html', query=orig_query, results=mongo.db.tasks.find({'title': {'$regex': orig_query }}))
 
 
 @app.route('/review/<review_id>')
 def review(review_id):
     print(review_id)
-    """Shows full recipe and increments view"""
+    """Shows full review and increments view"""
     mongo.db.tasks.find_one_and_update(
         {'_id': ObjectId(review_id)},
         {'$inc': {'views': 1}}

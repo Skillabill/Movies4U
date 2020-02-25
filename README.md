@@ -29,7 +29,6 @@ application.
 This functional specification included key features such as 
 * Input template
 * Data entry form
-* One Click feature for movie ratings (1-5 stars)
 * Search functionality for finding movie
 * Actor / Director info
 * One URL which allows you to submit or search a review
@@ -75,6 +74,8 @@ Deployment of future updates will be controlled within a maintenance window whic
 * Login/Registration 
 * Confirmation alert for movie review entry
 * Re-use of previously entered data (Director / Actor - other movies)
+* One Click feature for movie ratings (1-5 stars)
+
 
 #### Credits
 * All review information used on version 1.0 has been taken from [IMDb.com](hhtp//:www.imdb.com).
