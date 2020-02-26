@@ -5,25 +5,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
 
 </head>
 <body>
 
 <header>
     <div>
-        <nav class="navbar navbar-light bg-light">
-            <div class="nav-wrapper">
-                <a href="{{ url_for ('get_tasks') }}" class="brand-logo right">Flix</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li><a href="{{ url_for ('get_tasks') }}">Home</a></li>
-                </ul>
-                <ul>
-                    <li><a href="{{ url_for ('add_task') }}">Create</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for ('get_tasks') }}">Flix</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="{{ url_for ('get_tasks') }}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="{{ url_for ('add_task') }}">Create</a>
+                </div>
             </div>
         </nav>
+        <!--<nav class="navbar navbar-light bg-light">-->
+            <!--<div class="nav-wrapper">-->
+                <!--<a href="{{ url_for ('get_tasks') }}" class="brand-logo right">Flix</a>-->
+                <!--<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
+                <!--<ul id="nav-mobile" class="left hide-on-med-and-down">-->
+                    <!--<li><a href="{{ url_for ('get_tasks') }}">Home</a></li>-->
+                    <!--<li><a href="{{ url_for ('add_task') }}">Create</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</nav>-->
     </div>
 </header>
 {% block content %}
@@ -45,6 +56,7 @@
          $(document).ready(function(){
             $('.sidenav').sidenav();
             });
+
 
 </script>
 
