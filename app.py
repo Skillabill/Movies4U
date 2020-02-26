@@ -42,8 +42,8 @@ def edit_task(task_id):
 
 @app.route('/update_task/<task_id>', methods=['POST'])
 def update_task(task_id):
-    tasks = mongo.db.tasks
-    tasks.update({'_id': ObjectId(task_id)},
+    task = mongo.db.tasks
+    task.update({'_id': ObjectId(task_id)},
                  {
                      'title': request.form.get('title'),
                      'actors': request.form.get('actors'),
