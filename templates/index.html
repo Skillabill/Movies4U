@@ -22,8 +22,9 @@
                 <img src="{{task.image}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{task.title}}</h5>
-                    <button type="button" class="btn btn-primary"><a
-                            href="{{url_for('review', review_id=task._id)}}">Info</a></button>
+                    <a href="{{url_for('review', review_id=task._id)}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Info</a>
+                    <!--<button type="button" class="btn btn-primary"><a-->
+                            <!--href="{{url_for('review', review_id=task._id)}}">Info</a></button>-->
                 </div>
             </div>
         </div>
