@@ -41,7 +41,7 @@ in meeting the requirements for this project.
 ##### Technologies Used
 * Python 
 * HTML5
-* CSS / Materialize / Bootstrap
+* CSS / Bootstrap
 * Javascript / JQuery
 * MongoDB
 * Heroku
