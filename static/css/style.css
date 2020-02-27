@@ -4,6 +4,10 @@ h1 {
     font-family: Roboto, sans-serif;
 }
 
+body {
+   padding-top: 70px;
+}
+
 .jumbotron {
   background-image: url(../images/movie-jumbotron.jpg);
   background-size: cover;
