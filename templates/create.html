@@ -5,12 +5,12 @@
 
         <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
             <div class="row col">
-                <div class="input-field col s6">
+                <div class="input-field col md">
                     <i class="material-icons prefix">movie</i>
                     <input id="title" name="title" type="text">
                     <label for="icon_prefix">Movie Title</label>
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col md">
                     <i class="material-icons prefix">videocam</i>
                     <input id="director" name="director" type="text">
                     <label for="icon_prefix">Director</label>
@@ -18,12 +18,12 @@
             </div>
 
             <div class="row col">
-                <div class="input-field col s6">
+                <div class="input-field col md">
                     <i class="material-icons prefix">recent_actors</i>
                     <input id="actors" name="actors" type="text">
                     <label for="icon_prefix">Actors</label>
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col md">
                     <i class="material-icons prefix">timer</i>
                     <input id="running_time" name="running_time" type="text">
                     <label for="icon_prefix">Running Time (minutes)</label>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="row col">
-                <div class="input-field col s12">
+                <div class="input-field col lg">
                     <i class="material-icons prefix">add_a_photo</i>
                     <input id="image" name="image" type="text">
                     <label for="icon_prefix">Movie Image</label>
@@ -40,7 +40,7 @@
 
             <div class="row col">
                 <div class="row col s12">
-                    <div class="input-field col s12">
+                    <div class="input-field col lg">
                         <i class="material-icons prefix">description</i>
                         <textarea id="description" name="description" class="materialize-textarea"></textarea>
                         <label for="icon_prefix">Storyline</label>
@@ -50,7 +50,7 @@
 
             <div class="row col">
                 <div class="row col s12">
-                    <div class="input-field col s12">
+                    <div class="input-field col lg">
                         <i class="material-icons prefix">rate_review</i>
                         <textarea id="review" name="review" class="materialize-textarea"></textarea>
                         <label for="icon_prefix">Review</label>
