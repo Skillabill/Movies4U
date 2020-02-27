@@ -3,8 +3,6 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import os
 
-
-
 app = Flask(__name__)
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
