@@ -2,29 +2,30 @@
 
 {% block content %}
 <h1 class="mt-2">{{ review.title }}</h1>
-
-<div class="row pt-3">
-    <div class="col-lg-6">
-        <img class="card-img-top border-right" src="{{ review.image }}" alt="">
-        <hr>
-        <p>Views: {{ review.views }}</p>
-        <br>
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-lg-6">
+            <img class="card-img-top border-right" src="{{ review.image }}" alt="">
+            <hr>
+            <p>Views: {{ review.views }}</p>
+            <br>
+        </div>
+        <div class="col-lg-6">
+            <h3>Staring</h3>
+            <p style="white-space: pre-wrap;">{{ review.actors }}</p>
+            <h4>Director</h4>
+            <p style="white-space: pre-wrap;">{{ review.director }}</p>
+            <h5>Storyline</h5>
+            <p style="white-space: pre-wrap;">{{ review.description }}</p>
+            <h6><strong>Running Time</strong></h6>
+            <p style="white-space: pre-wrap;">{{ review.running_time }} Minutes</p>
+            <h5>Review</h5>
+            <p style="white-space: pre-wrap;">{{ review.review }}</p>
+        </div>
     </div>
-    <div class="col-lg-6">
-        <h3>Staring</h3>
-        <p style="white-space: pre-wrap;">{{ review.actors }}</p>
-        <h4>Director</h4>
-        <p style="white-space: pre-wrap;">{{ review.director }}</p>
-        <h5>Storyline</h5>
-        <p style="white-space: pre-wrap;">{{ review.description }}</p>
-        <h6><strong>Running Time</strong></h6>
-        <p style="white-space: pre-wrap;">{{ review.running_time }} Minutes</p>
-        <h5>Review</h5>
-        <p style="white-space: pre-wrap;">{{ review.review }}</p>
+    <div class="row float-right">
+        <a href="{{ url_for('edit_task', task_id=review._id) }}" class="btn btn-secondary mr-3">Edit</a>
+        <a href="{{ url_for('delete_task', task_id=review._id) }}" class="btn btn-danger">Delete</a>
     </div>
-</div>
-<div class="row float-right">
-    <a href="{{ url_for('edit_task', task_id=review._id) }}" class="btn btn-secondary mr-3">Edit</a>
-    <a href="{{ url_for('delete_task', task_id=review._id) }}" class="btn btn-danger">Delete</a>
 </div>
 {% endblock %}
