@@ -17,9 +17,11 @@ body {
   max-width: 100%;
   height: auto;
 }
-.jumbotron h1 p {
-    left: 50%
+
+.bg-tint{
+    background-color: rgba(0, 0, 0, 0.45);
 }
+
 a {
   text-decoration:none;
 }
