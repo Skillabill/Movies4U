@@ -1,9 +1,9 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container">
     <header class="jumbotron my-4">
-        <h1 class="display-3 text-info bg-tint">Flix</h1>
-        <p class="lead text-info bg-tint">Find, Create & Review</p>
-        <div class="row">
+        <h1 class="display-3 text-info text-right">Flix</h1>
+        <p class="lead text-info text-right">Find, Create & Review</p>
+        <div class="row text-right">
             <div class="col-lg-4">
                 <form class="input-group mb-3" action="{{ url_for('search') }}">
                     <input class="form-control" type="text" name="query"/>
