@@ -7,10 +7,10 @@
     </div>
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
-            <form action="{{ url_for('insert_task') }}" method="POST" class="col s12 text-center">
+            <form action="{{ url_for('edit_task') }}" method="POST" class="col s12">
                 <div class="form-group">
                     <label class="form-label">Title</label>
-                    <input type="text" value="{{ tasks.title }}" class="form-control" id="title" name="title" placeholder="Title"
+                    <input type="text" value="{{ tasks.title }}" class="form-control" id="title" name="title"
                            tabindex="1" required>
                 </div>
                 <div class="form-group">
@@ -44,7 +44,7 @@
                               placeholder="Review..." tabindex="4" required></textarea>
                 </div>
                 <div class="row col">
-                    <button class="btn btn-outline-primary" type="submit">Create
+                    <button class="btn btn-outline-primary" type="submit">Edit
                         <i class="material-icons right">playlist_add</i>
                     </button>
                 </div>
