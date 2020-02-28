@@ -20,17 +20,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active text-white" href="{{ url_for ('get_tasks') }}">Home <span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active text-white" href="{{ url_for ('get_tasks') }}">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link text-white" href="{{ url_for ('add_task') }}">Create</a>
                 </div>
             </div>
-            <form class="input-group mb-3 float-right" action="{{ url_for('search') }}">
-                <input class="form-control" type="text" name="query"/>
-                <div class="input-group-append">
-                    <button class="btn btn-info" type="submit">Find Reviews!</button>
-                </div>
-            </form>
         </nav>
     </div>
 </header>
@@ -53,7 +46,6 @@
          $(document).ready(function(){
             $('.sidenav').sidenav();
             });
-
 
 
 </script>
