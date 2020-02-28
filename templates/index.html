@@ -3,11 +3,11 @@
     <header class="jumbotron my-4">
         <h1 class="display-3 text-info text-right">Flix</h1>
         <p class="lead text-info text-right">Find, Create & Review</p>
-        <div class="row text-right">
+        <div class="row">
             <div class="col-lg-4">
                 <form class="input-group mb-3" action="{{ url_for('search') }}">
                     <input class="form-control" type="text" name="query"/>
-                    <div class="input-group-append">
+                    <div class="input-group-append text-right">
                         <button class="btn btn-info" type="submit">Find Reviews!</button>
                     </div>
                 </form>
