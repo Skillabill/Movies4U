@@ -24,7 +24,8 @@
         </div>
     </div>
     <div class="row float-right">
-        <a href="{{ url_for('edit_task', task_id=review._id) }}" class="btn btn-secondary mr-3">Edit</a>
+        <!--edit button has been isolated until wtforms is up and running-->
+        <!--<a href="{{ url_for('edit_task', task_id=review._id) }}" class="btn btn-secondary mr-3">Edit</a>-->
         <a href="{{ url_for('delete_task', task_id=review._id) }}" class="btn btn-danger">Delete</a>
     </div>
 </div>
