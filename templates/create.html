@@ -1,69 +1,104 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container">
-    <h3>Create Review</h3>
-    <div class="row">
+<!--<div class="container">-->
+    <!--<h3>Create Review</h3>-->
+    <!--<div class="row">-->
 
-        <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
-            <div class="row col">
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">movie</i>
-                    <input id="title" name="title" type="text">
-                    <label for="icon_prefix">Movie Title</label>
-                </div>
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">videocam</i>
-                    <input id="director" name="director" type="text">
-                    <label for="icon_prefix">Director</label>
-                </div>
-            </div>
+        <!--<form action="{{ url_for('insert_task') }}" method="POST" class="col s12">-->
+            <!--<div class="row col">-->
+            <!--<div class="input-field col s6">-->
+            <!--<i class="material-icons prefix">movie</i>-->
+            <!--<input id="title" name="title" type="text">-->
+            <!--<label for="icon_prefix">Movie Title</label>-->
+            <!--</div>-->
+            <!--<div class="input-field col s6">-->
+            <!--<i class="material-icons prefix">videocam</i>-->
+            <!--<input id="director" name="director" type="text">-->
+            <!--<label for="icon_prefix">Director</label>-->
+            <!--</div>-->
+            <!--</div>-->
 
-            <div class="row col">
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">recent_actors</i>
-                    <input id="actors" name="actors" type="text">
-                    <label for="icon_prefix">Actors</label>
-                </div>
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">timer</i>
-                    <input id="running_time" name="running_time" type="text">
-                    <label for="icon_prefix">Running Time (minutes)</label>
-                </div>
-            </div>
+            <!--<div class="row col">-->
+            <!--<div class="input-field col s6">-->
+            <!--<i class="material-icons prefix">recent_actors</i>-->
+            <!--<input id="actors" name="actors" type="text">-->
+            <!--<label for="icon_prefix">Actors</label>-->
+            <!--</div>-->
+            <!--<div class="input-field col s6">-->
+            <!--<i class="material-icons prefix">timer</i>-->
+            <!--<input id="running_time" name="running_time" type="text">-->
+            <!--<label for="icon_prefix">Running Time (minutes)</label>-->
+            <!--</div>-->
+            <!--</div>-->
 
-            <div class="row col">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">add_a_photo</i>
-                    <input id="image" name="image" type="text">
-                    <label for="icon_prefix">Movie Image</label>
-                </div>
-            </div>
+            <!--<div class="row col">-->
+            <!--<div class="input-field col s12">-->
+            <!--<i class="material-icons prefix">add_a_photo</i>-->
+            <!--<input id="image" name="image" type="text">-->
+            <!--<label for="icon_prefix">Movie Image</label>-->
+            <!--</div>-->
+            <!--</div>-->
 
-            <div class="row col">
-                <div class="row col s12">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">description</i>
-                        <textarea id="description" name="description" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix">Storyline</label>
+            <!--<div class="row col">-->
+            <!--<div class="row col s12">-->
+            <!--<div class="input-field col s12">-->
+            <!--<i class="material-icons prefix">description</i>-->
+            <!--<textarea id="description" name="description" class="materialize-textarea"></textarea>-->
+            <!--<label for="icon_prefix">Storyline</label>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="row col">-->
+            <!--<div class="row col s12">-->
+            <!--<div class="input-field col s12">-->
+            <!--<i class="material-icons prefix">rate_review</i>-->
+            <!--<textarea id="review" name="review" class="materialize-textarea"></textarea>-->
+            <!--<label for="icon_prefix">Review</label>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Create Review</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+                        <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Titile</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Title"
+                                       tabindex="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Your Email</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Your Email"
+                                       tabindex="2" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="subject">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                       placeholder="Subject" tabindex="3">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea rows="5" cols="50" name="message" class="form-control" id="message"
+                                          placeholder="Message..." tabindex="4" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-start-order">Send Message</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-
-            <div class="row col">
-                <div class="row col s12">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">rate_review</i>
-                        <textarea id="review" name="review" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix">Review</label>
-                    </div>
-                </div>
-            </div>
-
             <div class="row col">
                 <button class="btn btn-outline-primary" type="submit">Create
                     <i class="material-icons right">playlist_add</i>
                 </button>
             </div>
-        </form>
-    </div>
-</div>
+        <!--</form>-->
+    <!--</div>-->
+<!--</div>-->
 {% endblock %}
