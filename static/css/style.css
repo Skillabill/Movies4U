@@ -9,7 +9,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url(../images/movie-jumbotron.jpg);
+  background-image: url(../images/movie-cam.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -18,11 +18,4 @@ body {
   height: auto;
 }
 
-.bg-tint{
-    background-color: rgba(0, 0, 0, 0.45);
-}
-
-a {
-  text-decoration:none;
-}
 
